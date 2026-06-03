@@ -66,19 +66,49 @@ char	*ft_before(char *str)
 	char	*before;
 
 	i = 0;
-	while (str[i] != '\n')
-		i++;
+	while (str[i])
+	{
+		if (str[i] != '\n')
+			i++;
+		else
+			break ;
+	}
 	before = malloc(i + 2);
 	if (!before)
 		return (NULL);
 	i = 0;
-	while(str[i] != '\n')
+	while (str[i] != '\n')
 	{
 		before[i] = str[i];
 		i++;
 	}
-	before[i] = '\0';
+	before[i] = '\n';
+	before[i + 1] = '\0';
 	return (before);
+}
+
+char	*ft_after(char *str)
+{
+	size_t	i;
+	size_t	j;
+	char	*after;
+
+	i = 0;
+	while (str[i] != '\n')
+		i++;
+	after = malloc(ft_strlen(str) - i + 1);
+	if (!after)
+		return (NULL);
+	i++;
+	j = 0;
+	while (str[i])
+	{
+		after[j] = str[i];
+		i++;
+		j++;
+	}
+	after[j] = '\0';
+	return (after);
 }
 
 #include <stdio.h>
@@ -93,3 +123,13 @@ int	main(void)
 	printf("%s", ft_strjoin(str1, str2));
 	return (0);
 }
+
+
+static
+buffer
+
+join static + buffer
+
+tmp = static
+static = join(static, buffer)
+free(tmp)
