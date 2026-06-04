@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: matteoimparato <matteoimparato@student.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/04 14:09:21 by matteoimpar       #+#    #+#             */
+/*   Updated: 2026/06/04 14:09:37 by matteoimpar      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line.h"
 
 int	ft_strlen(char *str)
@@ -110,26 +122,3 @@ char	*ft_after(char *str)
 	after[j] = '\0';
 	return (after);
 }
-
-#include <stdio.h>
-
-int	main(void)
-{
-	char	*str1;
-	char	*str2;
-
-	str1 = "";
-	str2 = "World !";
-	printf("%s", ft_strjoin(str1, str2));
-	return (0);
-}
-
-
-static
-buffer
-
-join static + buffer
-
-tmp = static
-static = join(static, buffer)
-free(tmp)
