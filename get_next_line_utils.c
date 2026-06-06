@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: matteoimparato <matteoimparato@student.    +#+  +:+       +#+        */
+/*   By: mimparat <mimparat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 14:09:21 by matteoimpar       #+#    #+#             */
-/*   Updated: 2026/06/04 14:09:37 by matteoimpar      ###   ########.fr       */
+/*   Updated: 2026/06/04 18:03:39 by mimparat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include <stdio.h>
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(char *str)
 {
 	size_t	i;
 

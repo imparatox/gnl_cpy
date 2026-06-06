@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: matteoimparato <matteoimparato@student.    +#+  +:+       +#+        */
+/*   By: mimparat <mimparat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/23 04:18:48 by mimparat          #+#    #+#             */
-/*   Updated: 2026/06/04 14:19:37 by matteoimpar      ###   ########.fr       */
+/*   Created: 2026/06/04 17:03:26 by mimparat          #+#    #+#             */
+/*   Updated: 2026/06/04 18:03:14 by mimparat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,12 @@ char	*get_next_line(int fd)
 	if (fd == -1)
 		return (NULL);
 	stock = ft_read(fd, stock);
+	if (stock == NULL || stock[0] == '\0')
+	{
+		free(stock);
+		stock = NULL;
+		return (NULL);
+	}
 	if (ft_strchr(stock, '\n'))
 	{
 		tmp = stock;

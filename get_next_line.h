@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: matteoimparato <matteoimparato@student.    +#+  +:+       +#+        */
+/*   By: mimparat <mimparat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/23 03:51:22 by mimparat          #+#    #+#             */
-/*   Updated: 2026/06/04 14:20:27 by matteoimpar      ###   ########.fr       */
+/*   Updated: 2026/06/04 17:48:05 by mimparat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 
 char	*ft_read(int fd, char *stock);
 char	*get_next_line(int fd);
-int		ft_strlen(char *str);
+size_t	ft_strlen(char *str);
 char	*ft_strjoin(char *s1, char *s2);
 char	*ft_strchr(char *str, int c);
 char	*ft_before(char *str);
