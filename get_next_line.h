@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mimparat <mimparat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: matteoimparato <matteoimparato@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/23 03:51:22 by mimparat          #+#    #+#             */
-/*   Updated: 2026/06/08 00:36:14 by mimparat         ###   ########.fr       */
+/*   Updated: 2026/06/09 04:44:03 by matteoimpar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,13 @@
 # endif
 
 # include <fcntl.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 
 char	*ft_fill(char *stock, char *buf);
+char	*ft_clean(char *buf, ssize_t ret, char *stock);
 char	*ft_read(int fd, char *stock);
+char	*ft_extract(char **stock);
 char	*get_next_line(int fd);
 size_t	ft_strlen(char *str);
 char	*ft_strjoin(char *s1, char *s2);

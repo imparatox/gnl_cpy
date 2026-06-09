@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mimparat <mimparat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: matteoimparato <matteoimparato@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 17:03:26 by mimparat          #+#    #+#             */
-/*   Updated: 2026/06/08 08:23:50 by mimparat         ###   ########.fr       */
+/*   Updated: 2026/06/09 04:44:44 by matteoimpar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,18 @@ char	*ft_fill(char *stock, char *buf)
 	tmp = stock;
 	stock = ft_strjoin(tmp, buf);
 	free(tmp);
+	return (stock);
+}
+
+char	*ft_clean(char *buf, ssize_t ret, char *stock)
+{
+	free(buf);
+	if (ret == -1)
+	{
+		free(stock);
+		stock = NULL;
+		return (NULL);
+	}
 	return (stock);
 }
 
@@ -43,14 +55,7 @@ char	*ft_read(int fd, char *stock)
 		}
 		ret = read(fd, buf, BUFFER_SIZE);
 	}
-	free(buf);
-	if (ret == -1)
-	{
-		free(stock);
-		stock = NULL;
-		return (NULL);
-	}
-	return (stock);
+	return (ft_clean(buf, ret, stock));
 }
 
 char	*ft_extract(char **stock)
