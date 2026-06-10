@@ -17,8 +17,9 @@ char *line = get_next_line(fd);
 
 ## Algorithme
 
-[Explique ici avec tes propres mots : pourquoi la variable statique, comment tu joins
-le buffer à la statique à chaque appel, comment tu extrais la ligne et conserves le reste.]
+Une variable statique stock conserve les données lues mais pas encore retournées entre deux appels. Sans elle, les caractères lus au-delà d'un \n seraient perdus à chaque appel.
+À chaque appel, read() remplit un buffer de taille BUFFER_SIZE. Ce buffer est ajouté à stock via ft_strjoin. On répète cette opération jusqu'à trouver un \n dans stock ou atteindre la fin du fichier.
+Une fois un \n trouvé, on extrait ce qui le précède (incluant le \n) pour former la ligne à retourner. Ce qui suit le \n reste dans stock pour le prochain appel.
 
 ## Resources
 
